@@ -1,0 +1,35 @@
+spring.jmx:
+   enabled: false
+
+spring.datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:bootexample;MODE=MySQL
+
+server:
+  port: 8090
+
+security:
+  basic:
+    enabled: false
+
+management:
+  port: 8091
+  security:
+    enabled: false 
+
+project:
+  name: springboot_h2_jpa_rest_crud_demo
+  version: 1.0
+  description: a demo for crud operations using rest , jpa , h2 and spring boot
+info:
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+
+spring:
+  profiles: test
+
+spring.jpa:
+    hibernate.ddl-auto: create
